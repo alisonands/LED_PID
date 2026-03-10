@@ -29,14 +29,13 @@ void setup() {
 void loop() {
 
   // read sensors
-  int s1 = analogRead(A0);  // top-left
-  int s2 = analogRead(A1);  // top-right
+  int s1 = analogRead(A0);  // left
+  int s2 = analogRead(A1);  // right
   int s3 = analogRead(A2);  // bottom
 
-  // compute errors
-  // flipped signs
-  float errorX = s3 - s2;               // now positive = LED is left
-  float errorY = s1 - (s2 + s3) / 2.0;  // now positive = LED is below, servo moves up
+  // compute error
+  float errorX = s3 - s2;              
+  float errorY = s1 - (s2 + s3) / 2.0;  
 
   // integral
   integralX += errorX;
@@ -70,14 +69,20 @@ void loop() {
   // Serial.print(s2);
   // Serial.print("  S3:");
   // Serial.print(s3);
-  Serial.print(millis()); Serial.print(",");
+  // Serial.print(millis()); Serial.print(",");
 
   // Serial.print("   errX:");
-  Serial.print(errorX);
-  Serial.print(",");
-  
-  Serial.println(errorY);
-  // Serial.print(",");
+  Serial.print(millis()); Serial.print(",");
+
+  Serial.print(s1); Serial.print(",");
+  Serial.print(s2); Serial.print(",");
+  Serial.print(s3); Serial.print(",");
+
+  Serial.print(errorX); Serial.print(",");
+  Serial.print(errorY); Serial.print(",");
+
+  Serial.print(posX); Serial.print(",");
+  Serial.println(posY);
 
   delay(20);
 }
