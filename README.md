@@ -12,4 +12,3 @@
 
 
 ## Caveats
-- Unstable when led is outside of triangular perimeter.
