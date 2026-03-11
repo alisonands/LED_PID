@@ -1,4 +1,4 @@
-# 2dof LED position control with photoresistors
+# Two axis LED position control with photoresistors
 - This project aims to control the position of LEDs based on feedback from photoresistors. 
 
 ## Setup
