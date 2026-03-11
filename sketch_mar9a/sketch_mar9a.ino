@@ -34,8 +34,8 @@ void loop() {
   int s3 = analogRead(A2);  // bottom
 
   // compute error
-  float errorX = s3 - s2;              
-  float errorY = s1 - (s2 + s3) / 2.0;  
+  float errorX = s2 - s1;              
+  float errorY = s3 - (s2 + s1) / 2.0;  
 
   // integral
   integralX += errorX;
