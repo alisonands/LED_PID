@@ -29,9 +29,11 @@ The control logic derives error signals from the intensity differences between s
 ### Steady State Behavior
 1.  **PID Convergence**: As the system changes, the derivative and integral components reduce overshoot and drive the steady-state error to zero respectively. 
 
-<img src="images/error_plot.png" alt="error plot" width="90%" />
+Two degrees of freedom:
+<img src="images/error_plot.png" alt="error plot" width="50%" />
 
-<img src="images/ss_error.png" alt="Steady-state error" width="90%" />
+PID control demo:
+<img src="images/ss_error.png" alt="Steady-state error" width="50%" />
 
 2.  **Geometric error**: "Zero Error" ($PR1=PR2=PR3$) corresponds to the true geometric center only if all sensors are perfectly matched. If PR1 is 5% more sensitive than the others, the LED will settle further away from PR1 to equalize the readings.
 
